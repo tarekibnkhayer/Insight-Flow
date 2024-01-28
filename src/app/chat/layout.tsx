@@ -1,4 +1,5 @@
 import React from 'react';
+import ChatNav from '../components/ChatNav';
 
 const ChatLayout = ({
     children,
@@ -6,9 +7,9 @@ const ChatLayout = ({
     children: React.ReactNode;
   }>) => {
     return (
-        <div>
-            <h2>This is Navbar</h2>
-            {children}
+        <div className='grid grid-cols-10'>
+            <div className='col-span-4'><ChatNav></ChatNav></div>
+            <div className='col-span-6'>{children}</div>
         </div>
     );
 };
